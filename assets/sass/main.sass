@@ -1,0 +1,470 @@
+@import colors
+@import fonts
+@import helpers
+
+body
+  background-color: $white
+  margin-top: 80px
+  position: relative
+
+h2
+  font-family: 'TacaPro-Light'
+  font-size: 3em
+  text-transform: uppercase
+  color: $blue
+  margin-top: 50px
+  margin-left: 50px
+  margin-bottom: 30px
+
+.navbar
+  &.navbar-inverse
+    background-color: $black
+    border-color: $black
+    min-height: 80px
+    & .navbar-nav
+      &>li>a
+        font-family: 'MyriadPro'
+        font-size: 1.1em
+        padding-left: 7px
+        padding-right: 7px
+        padding-top: 65px
+        padding-bottom: 0px
+        line-height: 0px
+      & .active a
+        color: $blue
+        background-color: $black
+  & .navbar-brand
+    padding: 0 15px
+    height: 80px
+    line-height: 80px
+    &>img
+      height: 100%
+      padding: 5px
+      width: auto
+  &.navbar-toggle
+    margin-top: 23px
+    padding: 9px 10px !important
+  & .open > .dropdown-menu
+    display: inline-block
+  & .dropdown:hover .dropdown-menu
+    display: block
+  & .dropdown-menu
+    margin-top: 0px
+    font-family: 'TacaPro-Regular'
+    background-color: $black
+    width: 670px
+    left: 0
+    margin-top: 5px !important
+    & ul
+      list-style-type: none
+    & li
+      float: left
+      width: 20%
+      background-color: $black
+      -moz-transition: opacity 0.4s ease-in-out
+      -o-transition: opacity 0.4s ease-in-out
+      -webkit-transition: opacity 0.4s ease-in-out
+      transition: opacity 0.4s ease-in-out
+      &.active-category a
+        opacity: 1
+      & a
+        opacity: 0.4
+        background-color: $black
+        padding: 0
+        margin: 3px
+        &:hover
+          opacity: 1
+      & p
+        color: $light_gray
+        text-align: center
+        margin-bottom: 3px
+
+#slider
+  background-color: $black
+  position: relative
+  & .carousel-indicators
+    & li
+      background-color: $white
+      &.active
+        background-color: $blue
+        border: $blue
+  & .carousel-control
+    & .glyphicon-chevron-left,
+    .glyphicon-chevron-right
+      color: $blue
+  & .side
+    font-family: 'TacaPro-Regular'
+    position: absolute
+    bottom: 15px
+    width: 33%
+    & span
+      color: $red
+      -webkit-border-radius: 100px
+      -moz-border-radius: 100px
+      border-radius: 100px
+      background-color: #082344
+      padding: 5px
+    &.right
+      background: rgba(3,3,3,0)
+      background: -moz-linear-gradient(left, rgba(3,3,3,0) 0%, rgba(3,3,3,0.12) 12%, rgba(5,5,5,0.25) 25%, rgba(3,3,3,0.39) 39%, rgba(3,3,3,0.5) 50%, rgba(0,0,0,0.52) 52%, rgba(0,0,0,0.6) 60%, rgba(3,3,3,0.76) 76%, rgba(0,0,0,0.91) 91%, rgba(0,0,0,1) 100%)
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(3,3,3,0)), color-stop(12%, rgba(3,3,3,0.12)), color-stop(25%, rgba(5,5,5,0.25)), color-stop(39%, rgba(3,3,3,0.39)), color-stop(50%, rgba(3,3,3,0.5)), color-stop(52%, rgba(0,0,0,0.52)), color-stop(60%, rgba(0,0,0,0.6)), color-stop(76%, rgba(3,3,3,0.76)), color-stop(91%, rgba(0,0,0,0.91)), color-stop(100%, rgba(0,0,0,1)))
+      background: -webkit-linear-gradient(left, rgba(3,3,3,0) 0%, rgba(3,3,3,0.12) 12%, rgba(5,5,5,0.25) 25%, rgba(3,3,3,0.39) 39%, rgba(3,3,3,0.5) 50%, rgba(0,0,0,0.52) 52%, rgba(0,0,0,0.6) 60%, rgba(3,3,3,0.76) 76%, rgba(0,0,0,0.91) 91%, rgba(0,0,0,1) 100%)
+      background: -o-linear-gradient(left, rgba(3,3,3,0) 0%, rgba(3,3,3,0.12) 12%, rgba(5,5,5,0.25) 25%, rgba(3,3,3,0.39) 39%, rgba(3,3,3,0.5) 50%, rgba(0,0,0,0.52) 52%, rgba(0,0,0,0.6) 60%, rgba(3,3,3,0.76) 76%, rgba(0,0,0,0.91) 91%, rgba(0,0,0,1) 100%)
+      background: -ms-linear-gradient(left, rgba(3,3,3,0) 0%, rgba(3,3,3,0.12) 12%, rgba(5,5,5,0.25) 25%, rgba(3,3,3,0.39) 39%, rgba(3,3,3,0.5) 50%, rgba(0,0,0,0.52) 52%, rgba(0,0,0,0.6) 60%, rgba(3,3,3,0.76) 76%, rgba(0,0,0,0.91) 91%, rgba(0,0,0,1) 100%)
+      background: linear-gradient(to right, rgba(3,3,3,0) 0%, rgba(3,3,3,0.12) 12%, rgba(5,5,5,0.25) 25%, rgba(3,3,3,0.39) 39%, rgba(3,3,3,0.5) 50%, rgba(0,0,0,0.52) 52%, rgba(0,0,0,0.6) 60%, rgba(3,3,3,0.76) 76%, rgba(0,0,0,0.91) 91%, rgba(0,0,0,1) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030303', endColorstr='#000000', GradientType=1 )
+      right: 65px
+      & img
+        width: 10%
+      & span
+        margin-right: 10px
+        width: 80%
+    &.left
+      background: rgba(0,0,0,1)
+      background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 9%, rgba(3,3,3,0.76) 24%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.52) 48%, rgba(3,3,3,0.5) 50%, rgba(3,3,3,0.39) 61%, rgba(5,5,5,0.25) 75%, rgba(3,3,3,0.12) 88%, rgba(3,3,3,0) 100%)
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(9%, rgba(0,0,0,0.91)), color-stop(24%, rgba(3,3,3,0.76)), color-stop(40%, rgba(0,0,0,0.6)), color-stop(48%, rgba(0,0,0,0.52)), color-stop(50%, rgba(3,3,3,0.5)), color-stop(61%, rgba(3,3,3,0.39)), color-stop(75%, rgba(5,5,5,0.25)), color-stop(88%, rgba(3,3,3,0.12)), color-stop(100%, rgba(3,3,3,0)))
+      background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 9%, rgba(3,3,3,0.76) 24%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.52) 48%, rgba(3,3,3,0.5) 50%, rgba(3,3,3,0.39) 61%, rgba(5,5,5,0.25) 75%, rgba(3,3,3,0.12) 88%, rgba(3,3,3,0) 100%)
+      background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 9%, rgba(3,3,3,0.76) 24%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.52) 48%, rgba(3,3,3,0.5) 50%, rgba(3,3,3,0.39) 61%, rgba(5,5,5,0.25) 75%, rgba(3,3,3,0.12) 88%, rgba(3,3,3,0) 100%)
+      background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 9%, rgba(3,3,3,0.76) 24%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.52) 48%, rgba(3,3,3,0.5) 50%, rgba(3,3,3,0.39) 61%, rgba(5,5,5,0.25) 75%, rgba(3,3,3,0.12) 88%, rgba(3,3,3,0) 100%)
+      background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.91) 9%, rgba(3,3,3,0.76) 24%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.52) 48%, rgba(3,3,3,0.5) 50%, rgba(3,3,3,0.39) 61%, rgba(5,5,5,0.25) 75%, rgba(3,3,3,0.12) 88%, rgba(3,3,3,0) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#030303', GradientType=1 )
+      & span
+        margin-left: 10px
+
+#main-slider
+  position: relative
+
+#showroom
+  position: relative
+  & .showroom-categories-menu
+    list-style-type: none
+  & li
+    padding-left: 0
+    padding-right: 0
+    margin: 3px
+    cursor: pointer
+    border: 1px solid $gray
+    &.active,
+    &:hover
+      &>img
+        -webkit-filter: brightness(100%)
+      &>p
+        color: $black
+    &>img
+      -webkit-filter: brightness(40%)
+      -webkit-transition: all 0.5s ease
+      -moz-transition: all 0.5s ease
+      -o-transition: all 0.5s ease
+      -ms-transition: all 0.5s ease
+      transition: all 0.5s ease
+    &>p
+      font-family: 'TacaPro-Regular'
+      text-align: center
+      font-size: 1em
+      padding-left: 3px
+      color: $most-dark-gray
+  & .cummins-logo
+    width: 5%
+    position: absolute
+    bottom: 15px
+    margin-left: 15px
+  & .light
+    position: absolute
+    width: 15%
+    border: solid 5px $dark_gray
+    right: 115px
+    bottom: -40px
+
+#cars-slider
+  margin-top: 15px
+  & .carousel-caption
+    width: 25%
+    right: 15%
+    left: 15%
+    & h3
+      font-family: 'TacaPro-Regular'
+      text-transform: uppercase
+      font-size: 2.5em
+      color: $dark_gray
+      text-shadow: 1px 1px $white
+    & h4,
+    & li
+      color: $black
+      text-shadow: 1px 1px $most_light_gray
+    & h4
+      font-size: 2em
+    & li
+      font-size: 1.4em
+    & .well
+      background-color: $gray
+      border-color: $gray
+      font-family: 'TacaPro-Light'
+      color: $white
+      margin-bottom: 2px
+      font-size: 0.8em
+      border-radius: 0
+    & span
+      font-size: 2em
+    & .triangle
+      line-height: 19.5px
+      color: $gray
+      text-shadow: none
+    & .pdf-icon
+      display: block
+      & img
+        width: 15%
+    & ul
+      padding-left: 20px
+      text-align: left
+  & .carousel-indicators
+    & li
+      background-color: $white
+      &.active
+        background-color: $blue
+        border: $blue
+  & .carousel-control
+    & .glyphicon-chevron-left,
+    .glyphicon-chevron-right
+      color: $black
+
+#contact-form
+  position: relative
+  &::before
+    position: absolute
+    z-index: -1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    content: ""
+    background-image: url("../img/llave.jpg")
+    background-position: 50% 50%
+    background-size: cover
+    opacity: 0.4
+    -webkit-filter: blur(5px)
+    -moz-filter: blur(5px)
+    -ms-filter: blur(5px)
+    -o-filter: blur(5px)
+    filter: blur(5px)
+  & .locations
+    background-color: rgba(0, 0, 0, 0.5)
+    font-family: 'TacaPro-Light'
+    & ul
+      list-style-type: none
+    & .wrapper
+      width: 60%
+      margin-left: 100px
+      background-color: $most_dark_gray
+      overflow-y: scroll
+      color: $white
+      max-height: 500px
+      margin-bottom: 25px
+    & .city
+      &>h3
+        background-color: $gray
+        padding: 5px 10px
+        width: 100%
+        font-size: 1.5em
+        margin-top: 0
+    & .store
+      margin-right: 10px
+      margin-bottom: 20px
+      &>h4
+        display: flex
+        align-items: center
+        & span
+          content: ""
+          flex: 1 1 auto
+          border-top: 1px solid $white
+          margin-left: 5px
+      &>p
+        padding-right: 15px
+  & .contact-form
+    position: relative
+    font-family: 'MyriadPro'
+    & h3
+      font-family: 'TacaPro-Regular'
+      font-size: 3em
+      color: $dark_gray
+      margin-top: 50px
+      margin-left: 50px
+    form
+      margin-left: 100px
+      & button
+        width: 100%
+    & .foton-total-care
+      position: absolute
+      width: 15%
+      bottom: 5px
+      left: 0
+
+#quote
+  background-color: $most_light_gray
+  font-family: 'TacaPro-Light'
+  #cotizador
+    & form
+      display: flex
+      width: 100%
+      flex-wrap: wrap
+      justify-content: space-evenly
+      & p
+        flex-basis: 30%
+      & span
+        color: red
+      & div
+        flex-basis: 100%
+        text-align: center
+    & input[type="submit"]
+        width: 200px
+    & span.field
+      display: block
+      border: thin solid rgba(0, 0, 0, .125)
+      background-color: #FFF
+      box-shadow: unset
+      & span
+          color: inherit
+    & input,
+    & select,
+    & span.field
+      width: 300px
+      padding: .6180469716em
+      background-color: #f2f2f2
+      color: #43454b
+      outline: 0
+      border: 0
+      box-sizing: border-box
+      font-weight: 400
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125)
+      border-radius: unset
+      -moz-appearance: textfield
+      -webkit-appearance: none
+    & select
+      -webkit-appearance: menulist-button
+      -moz-appearance: button-arrow-down
+      padding-top: 0.5em
+    & input:disabled,
+    & select:disabled
+      color: #797b81
+      background-color: #f9f9f9
+
+    & .seguroFoton /* Hack para modificar el checkbox */
+      display: block
+      width: 80px
+      height: 26px
+      background: #f2f2f2
+      margin: 15px 0
+      position: relative
+      border-radius: 50px
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .125)
+      &:after
+        content: 'NO'
+        color: #000
+        position: absolute
+        right: 10px
+        top: 0
+        z-index: 0
+        font: 12px/26px Arial, sans-serif
+        font-weight: bold
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, .15)
+      &:before
+        content: 'SI'
+        color: #43454b
+        position: absolute
+        left: 10px
+        top: 0
+        z-index: 0
+        font: 12px/26px Arial, sans-serif
+        font-weight: bold
+      & label
+        display: block
+        width: 34px
+        height: 20px
+        cursor: pointer
+        position: absolute
+        top: 3px
+        left: 3px
+        z-index: 1
+        background: #fcfff4
+        border-radius: 50px
+        transition: all 0.4s ease
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3)
+        margin: 0
+      & input[type=checkbox]
+        visibility: hidden
+      & input[type=checkbox]:checked + label
+        left: 43px
+  & h3
+    text-align: center
+    margin-bottom: 25px
+  & .cummins-section
+    background: linear-gradient(to right, #000102, #09274B)
+    margin-top: 30px
+    padding-top: 30px
+    & .cummins-big-logo
+      width: 80%
+    & .cummins-motor
+      width: 100%
+    & .technical-details
+      background-color: $gray
+      padding-top: 15px
+      padding-bottom: 15px
+      padding-right: 15px
+      & li
+        margin-bottom: 10px
+
+#foton-sport
+  & .foton-sport-logo
+    margin-top: 15px
+  & .Rich_Web_VS_VTS_Title1
+    font-family: 'TacaPro-Regular'
+  & .jssort01-99-66
+    background-color: $dark-gray
+
+#news
+  & .carousel
+    font-family: 'TacaPro-Regular'
+    padding-left: 5px
+    padding-right: 2px
+    & h4
+      font-size: 1em
+      font-weight: bold
+    & .post
+      max-height: 350px
+      overflow-y: scroll
+      opacity: 1
+      &:hover
+        cursor: pointer
+        opacity: 0.4
+      & .thumbnail>img
+        max-width: 100%
+        height: auto
+      & .date
+        color: gray
+      & p::after
+        content: "..."
+    & img
+      height: 165px
+      width: 100%
+  & .carousel-control
+    padding-top: 15%
+    width: 5%
+
+.single-post
+  font-family: 'TacaPro-Light'
+
+.entry
+  margin-top: 30px
+  margin-bottom: 30px
+
+footer
+  background: linear-gradient(to right, #000102, #09274B)
+  padding-top: 15px
+  padding-bottom: 15px
+  & .copyright
+    font-family: 'TacaPro-Light'
+    color: $white
+    text-align: center
+    & .icons
+      display: unset
+
+@import media_queries
