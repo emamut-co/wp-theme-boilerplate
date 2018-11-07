@@ -16,21 +16,6 @@ function my_theme_register_required_plugins()
       'name'      => 'MetaBox',
       'slug'      => 'meta-box',
       'required'  => true
-    ),
-    array(
-      'name'      => 'MB Rest API',
-      'slug'      => 'mb-rest-api',
-      'required'  => true
-    ),
-    array(
-      'name'      => 'Intuitive Custom Post Order',
-      'slug'      => 'intuitive-custom-post-order',
-      'required'  => true
-    ),
-    array(
-      'name'      => 'Smush Image Compression and Optimization',
-      'slug'      => 'wp-smushit',
-      'required'  => true
     )
 
   );
