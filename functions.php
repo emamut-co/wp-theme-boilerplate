@@ -4,8 +4,8 @@ require_once dirname( __FILE__ ) . '/helpers/TGM-Plugin-Activation-2.6.1/class-t
 require_once dirname( __FILE__ ) . '/helpers/required-plugins.php';
 // require_once dirname( __FILE__ ) . '/helpers/rest_custom_endpoints.php';
 
-require_once dirname( __FILE__ ) . '/helpers/slider-cpt.php';
-require_once dirname( __FILE__ ) . '/helpers/slider-metabox.php';
+// require_once dirname( __FILE__ ) . '/helpers/slider-cpt.php';
+// require_once dirname( __FILE__ ) . '/helpers/slider-metabox.php';
 
 add_theme_support( 'post-thumbnails' );
 
