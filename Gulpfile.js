@@ -36,7 +36,7 @@ gulp.task('clean:css_folder', function() {
 });
 
 gulp.task('default', ['clean:css_folder', 'sass', 'browser-sync'], function () {
-  gulp.watch(sass_folder + '**/*.sass', ['sass']);
+  gulp.watch(sass_folder + '/**/*.sass', ['sass']);
 });
 
 gulp.task('prod', ['clean:css_folder'], function () {
