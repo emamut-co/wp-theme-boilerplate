@@ -14,7 +14,7 @@ var sassOptions = {
 };
 
 gulp.task('sass', function () {
-  gulp.src(sass_folder + '**/*.sass')
+  gulp.src(sass_folder + '/**/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
@@ -40,7 +40,7 @@ gulp.task('default', ['clean:css_folder', 'sass', 'browser-sync'], function () {
 });
 
 gulp.task('prod', ['clean:css_folder'], function () {
-  gulp.src(sass_folder + '**/*.sass')
+  gulp.src(sass_folder + '/**/*.sass')
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
