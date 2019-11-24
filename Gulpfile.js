@@ -24,7 +24,8 @@ gulp.task('sass', function () {
 
 gulp.task('browser-sync', function () {
   browserSync.init(['./assets/css/**/*.css', './assets/js/**/*.js', './**/*.php'], {
-    proxy: 'http://localhost/workspace/theme-boilerplate'
+    proxy: 'http://localhost/workspace/theme-boilerplate',
+    open: false
   });
 });
 
