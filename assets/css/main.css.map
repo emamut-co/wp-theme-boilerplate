@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.sass","_colors.sass"],"names":[],"mappings":"AAEA;EACE,uBCFU;CDEiB","file":"main.css","sourcesContent":["@import \"colors\";\n\nbody {\n  background-color: $black; }\n","$white: #FFF;\n$black: #000;\n"]}
+{"version":3,"sources":["main.sass","main.css"],"names":[],"mappings":"AAEA;EACE,qBAAqB;ACDvB","file":"main.css","sourcesContent":["@import \"colors\";\n\nbody {\n  background-color: red; }\n","body {\n  background-color: red;\n}\n"]}
