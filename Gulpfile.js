@@ -13,34 +13,37 @@ var sassOptions = {
   outputStyle: 'expanded'
 };
 
-gulp.task('sass', function () {
+gulp.task('sass', (done) => {
   gulp.src(sass_folder + '/**/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(css_folder));
+
+    done();
 });
 
-gulp.task('browser-sync', function () {
+gulp.task('browser-sync', () => {
   browserSync.init(['./assets/css/**/*.css', './assets/js/**/*.js', './**/*.php'], {
-    proxy: 'http://localhost/workspace/theme-boilerplate',
+    proxy: 'http://localhost/workspace/wp-test',
     open: false
   });
 });
 
-gulp.task('clean:css_folder', function() {
-  return del([
+gulp.task('clean:css_folder', (done)  =>{
+  del.sync(
     './assets/css/*.map',
     './assets/css/*.css'
-  ]);
+  );
+  done();
 });
 
-gulp.task('default', ['clean:css_folder', 'sass', 'browser-sync'], function () {
-  gulp.watch(sass_folder + '/**/*.sass', ['sass']);
-});
+gulp.task('default', gulp.series('clean:css_folder', 'sass', 'browser-sync', () => {
+  gulp.watch(sass_folder + '/**/*.sass', series('sass'));
+}));
 
-gulp.task('prod', ['clean:css_folder'], function () {
+gulp.task('prod', gulp.series('clean:css_folder', () => {
   gulp.src(sass_folder + '/**/*.sass')
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass({ outputStyle: 'compressed' }))
@@ -48,4 +51,4 @@ gulp.task('prod', ['clean:css_folder'], function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(css_folder))
     .pipe(browserSync.stream());
-});
+}));
