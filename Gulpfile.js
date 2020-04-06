@@ -1,54 +1,33 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var rename = require('gulp-rename');
-var del = require('del');
+const gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  postcss = require("gulp-postcss"),
+  autoprefixer = require("autoprefixer"),
+  cssnano = require("cssnano"),
+  sourcemaps = require("gulp-sourcemaps"),
+  browserSync = require('browser-sync').create();
 
-var sass_folder = './assets/sass/';
-var css_folder = './assets/css/';
-var sassOptions = {
-  errLogToConsole: true,
-  outputStyle: 'expanded'
-};
-
-gulp.task('sass', (done) => {
-  gulp.src(sass_folder + '/**/*.sass')
+//compile sass into css
+function style() {
+  return gulp.src('src/sass/**/*.sass')
     .pipe(sourcemaps.init())
-    .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(css_folder));
+    .pipe(sass())
+    .on("error", sass.logError)
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.stream());
+}
 
-    done();
-});
-
-gulp.task('browser-sync', () => {
-  browserSync.init(['./assets/css/**/*.css', './assets/js/**/*.js', './**/*.php'], {
+function watch() {
+  browserSync.init({
     proxy: 'http://localhost/workspace/wp-test',
     open: false
   });
-});
+  gulp.watch('src/sass/**/*.sass', style)
+  gulp.watch('./**/*.html').on('change', browserSync.reload);
+  gulp.watch('./**/*.php').on('change', browserSync.reload);
+  gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+}
 
-gulp.task('clean:css_folder', (done)  =>{
-  del.sync(
-    './assets/css/*.map',
-    './assets/css/*.css'
-  );
-  done();
-});
-
-gulp.task('default', gulp.series('clean:css_folder', 'sass', 'browser-sync', () => {
-  gulp.watch(sass_folder + '/**/*.sass', series('sass'));
-}));
-
-gulp.task('prod', gulp.series('clean:css_folder', () => {
-  gulp.src(sass_folder + '/**/*.sass')
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(autoprefixer('last 1 version', '> 1%', 'ie 8', 'ie 7'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(css_folder))
-    .pipe(browserSync.stream());
-}));
+exports.style = style;
+exports.watch = watch;
