@@ -9,4 +9,4 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div>
+    <div class="container mx-auto" id="app" v-cloak>
