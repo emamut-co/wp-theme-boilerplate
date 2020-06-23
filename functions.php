@@ -24,10 +24,10 @@ register_nav_menus( array(
   'primary' => __( 'Primary Menu', 'emamut' ),
 ) );
 
-function register_navwalker(){
-	require_once get_template_directory() . '/helpers/class-wp-bootstrap-navwalker.php';
-}
-add_action( 'after_setup_theme', 'register_navwalker' );
+// function register_navwalker(){
+// 	require_once get_template_directory() . '/helpers/class-wp-bootstrap-navwalker.php';
+// }
+// add_action( 'after_setup_theme', 'register_navwalker' );
 
 function config_custom_logo() {
   add_theme_support( 'custom-logo' );
