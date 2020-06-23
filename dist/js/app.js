@@ -12586,8 +12586,13 @@ __webpack_require__.r(__webpack_exports__);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    message1: 'Column 1',
-    message2: 'Column 2'
+    messages: [{
+      text: 'Column 1',
+      bgClass: 'bg-gray-400'
+    }, {
+      text: 'Column 2',
+      bgClass: 'bg-gray-500'
+    }]
   }
 });
 
