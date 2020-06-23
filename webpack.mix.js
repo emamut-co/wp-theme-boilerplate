@@ -1,7 +1,12 @@
-const mix = require('laravel-mix');
+let mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
 
-mix.js('resources/js/app.js', 'public/js')
-  .sass('resources/sass/app.sass', 'public/css')
+mix.js('src/js/app.js', 'dist/js')
+  .sass('src/sass/app.sass', 'dist/css')
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwind.config.js')]
+  })
   .sourceMaps(true, 'source-map')
   .browserSync({
     proxy: 'http://localhost/wp-test/',
