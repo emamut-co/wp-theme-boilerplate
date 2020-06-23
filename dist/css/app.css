@@ -17879,7 +17879,7 @@ video {
 }
 
 body {
-  background: black;
+  background: gray;
 }
 
 @media (min-width: 640px) {

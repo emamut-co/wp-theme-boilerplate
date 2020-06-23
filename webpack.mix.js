@@ -7,8 +7,13 @@ mix.js('src/js/app.js', 'dist/js')
     processCssUrls: false,
     postCss: [tailwindcss('./tailwind.config.js')]
   })
-  .sourceMaps(true, 'source-map')
   .browserSync({
     proxy: 'http://localhost/wp-test/',
-    open: false
+    open: false,
+    files:[
+      'dist/css/app.css',
+      'dist/js/app.js',
+      './**/*.+(html|php)'
+    ]
   })
+  .sourceMaps(true, 'source-map')
