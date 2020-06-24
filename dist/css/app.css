@@ -17878,10 +17878,6 @@ video {
   transition-delay: 1000ms;
 }
 
-body {
-  background: black;
-}
-
 [v-cloak] {
   display: none;
 }

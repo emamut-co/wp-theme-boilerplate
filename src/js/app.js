@@ -1,17 +1,17 @@
-import Vue from 'vue';
+import Vue from 'vue'
+import axios from 'axios'
 
 const app = new Vue({
   el: '#app',
   data: {
-    messages: [
-      {
-        text: 'Column 1',
-        bgClass: 'bg-gray-400'
-      },
-      {
-        text: 'Column 2',
-        bgClass: 'bg-gray-500'
-      }
-    ]
+    menuArray: []
+  },
+  mounted() {
+    let self = this
+
+    axios.get(siteURL + '/wp-json/wp/v2/menu')
+      .then(function (response) {
+        self.menuArray = response.data
+      })
   }
 });

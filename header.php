@@ -9,4 +9,5 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div class="container mx-auto" id="app" v-cloak>
+    <div id="app" v-cloak>
+      <?php get_template_part( 'partials/menu', 'template' ); ?>
