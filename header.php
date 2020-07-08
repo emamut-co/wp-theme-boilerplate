@@ -9,5 +9,5 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div id="app" v-cloak>
+    <div id="app" class="container" v-cloak>
       <?php get_template_part( 'partials/menu', 'template' ); ?>

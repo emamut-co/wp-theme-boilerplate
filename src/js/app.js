@@ -1,17 +1,10 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-const app = new Vue({
-  el: '#app',
-  data: {
-    menuArray: []
-  },
-  mounted() {
-    let self = this
+require("bootstrap");
+import $ from "jquery";
+window.$ = window.jQuery = $;
 
-    axios.get(siteURL + '/wp-json/wp/v2/menu')
-      .then(function (response) {
-        self.menuArray = response.data
-      })
-  }
+const app = new Vue({
+  el: '#app'
 });
