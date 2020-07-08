@@ -14432,8 +14432,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/emamut/workspace/wp-test/wp-content/themes/wp-test/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /Users/emamut/workspace/wp-test/wp-content/themes/wp-test/src/sass/app.sass */"./src/sass/app.sass");
+__webpack_require__(/*! /Users/emamut/workspace/wp-test/wp-content/themes/wp-theme-boilerplate/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Users/emamut/workspace/wp-test/wp-content/themes/wp-theme-boilerplate/src/sass/app.sass */"./src/sass/app.sass");
 
 
 /***/ })
