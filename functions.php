@@ -20,10 +20,8 @@ register_nav_menus( array(
 ) );
 
 function register_navwalker(){
-  require_once get_template_directory() . '/helpers/required-plugins.php';
-  require_once get_template_directory() . '/helpers/rest_custom_endpoints.php';
-  require_once get_template_directory() . '/helpers/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php';
-  require_once get_template_directory() . '/helpers/class-wp-bootstrap-navwalker.php';
+	require_once dirname( __FILE__ ) . '/helpers/rest_custom_endpoints.php';
+	require_once dirname( __FILE__ ) . '/helpers/theme_admin_fields.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
