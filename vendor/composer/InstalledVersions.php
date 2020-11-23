@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '49f36a6a4cfcbd6f3db08bebd9188168c3f329a9',
+    'reference' => 'cdcd8771a925eb0cdb8b47bf6382048123a49c92',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '49f36a6a4cfcbd6f3db08bebd9188168c3f329a9',
+      'reference' => 'cdcd8771a925eb0cdb8b47bf6382048123a49c92',
     ),
     'htmlburger/carbon-fields' => 
     array (
