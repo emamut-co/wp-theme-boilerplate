@@ -1,14 +1,21 @@
 let mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
 
-mix.autoload({
-    jquery: ["$", "window.jQuery", "jQuery"],
-    "popper.js/dist/umd/popper.js": ["Popper"],
+mix
+  .js('src/js/app.js', 'dist/js')
+  .sass('src/sass/app.sass', 'dist/css')
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwind.config.js')]
   })
-  .js("src/js/app.js", "dist/js")
-  .sass("src/sass/app.sass", "dist/css")
   .browserSync({
-    proxy: "http://localhost/wp-test/",
+    proxy: 'http://localhost/wp-test/',
     open: false,
-    files: ["dist/css/app.css", "dist/js/app.js", "./**/*.+(html|php)"],
+    files: [
+      'dist/css/app.css',
+      'dist/js/app.js',
+      'dist/js/map-app.js',
+      './**/*.+(html|php)'
+    ]
   })
-  .sourceMaps(true, "source-map");
+  .sourceMaps(true, 'source-map');

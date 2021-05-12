@@ -9,5 +9,4 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div id="app" class="container" v-cloak>
-      <?php get_template_part( 'partials/menu', 'template' ); ?>
+    <div id="app" class="bg-red-500 h-screen" v-cloak>

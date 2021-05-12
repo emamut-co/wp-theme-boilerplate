@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'cdcd8771a925eb0cdb8b47bf6382048123a49c92',
+    'reference' => '16118d877e010130ffaf308ffe9d9ede9f329ffc',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,16 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'cdcd8771a925eb0cdb8b47bf6382048123a49c92',
+      'reference' => '16118d877e010130ffaf308ffe9d9ede9f329ffc',
     ),
     'htmlburger/carbon-fields' => 
     array (
-      'pretty_version' => 'v3.2.1',
-      'version' => '3.2.1.0',
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cd772f1c6c002207eed71f98a8c54ad9403d5644',
+      'reference' => '1a3fa2c50f3e25775ff3846c22fab2384312d96a',
     ),
   ),
 );

@@ -1,9 +1,5 @@
-import Vue from 'vue'
-import axios from 'axios'
-
-require("bootstrap");
-import $ from "jquery";
-window.$ = window.jQuery = $;
+import Vue from 'vue';
+import axios from 'axios';
 
 const app = new Vue({
   el: '#app'

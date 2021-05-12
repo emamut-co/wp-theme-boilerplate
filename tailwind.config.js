@@ -1,12 +1,9 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
   purge: ['./**/*.php', './src/**/*.vue', './src/**/*.js'],
-  theme: {
-    extend: {},
+  darkMode: false, // or 'media' or 'class'
+  theme: {},
+  variants: {
+    extend: {}
   },
-  variants: {},
-  plugins: [],
+  plugins: []
 };
