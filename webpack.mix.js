@@ -6,7 +6,7 @@ mix
   .sass('src/sass/app.sass', 'dist/css')
   .options({
     processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.config.js')]
+    postCss: [tailwindcss('./tailwind.config.js')],
   })
   .browserSync({
     proxy: 'http://localhost/wp-test/',
@@ -15,7 +15,7 @@ mix
       'dist/css/app.css',
       'dist/js/app.js',
       'dist/js/map-app.js',
-      './**/*.+(html|php)'
-    ]
+      './**/*.+(html|php)',
+    ],
   })
   .sourceMaps(true, 'source-map');
